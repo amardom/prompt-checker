@@ -1,0 +1,16 @@
+{
+  "name": "prompt-checker",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=server.mts --test-coverage-include=ai-replies.mts --test-coverage-include=client.js --test-coverage-lines=90 --test-coverage-functions=90 --test-coverage-branches=90"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

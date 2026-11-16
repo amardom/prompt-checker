@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Checker</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/vendor/katex.min.js"></script>
+  <script defer src="/vendor/auto-render.min.js"></script>
+  <script type="module">
+    import { startClient } from '/client.js';
+    startClient();
+  </script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="wordmark">Prompt Checker</p>
+      <h1 id="heading"></h1>
+    </header>
+    <form id="access" hidden>
+      <label for="code">Access code</label>
+      <input id="code" required>
+      <button type="submit">Continue</button>
+    </form>
+    <details id="groups" hidden>
+      <summary>Group codes</summary>
+      <ul></ul>
+    </details>
+    <form id="submission" hidden>
+      <label for="prompt">Your prompt</label>
+      <textarea id="prompt" maxlength="2000" rows="5" required></textarea>
+      <button type="submit" disabled>Send for review</button>
+    </form>
+    <p id="error" role="status"></p>
+    <section id="prompts" aria-label="Prompts" aria-live="polite"></section>
+  </main>
+</body>
+</html>
